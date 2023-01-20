@@ -1,0 +1,101 @@
+body{
+    object-fit: contain;
+}
+
+h1 {
+    font-size: 25px;
+    text-align: left;
+    color: black;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.main-page {
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    right: 50%;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    margin: auto;
+    scroll-behavior: auto;
+}
+
+.inner-div {
+
+    box-shadow: 5px 5px 5px 5px lightgray;
+
+}
+
+.button-position {
+    top: 90%;
+    left: 25%;
+    right: 20%;
+    margin: auto;
+    position: absolute;
+
+
+}
+
+.two-col {
+    overflow: hidden;
+    /* Makes this div contain its floats */
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 15px;
+}
+
+.two-col .col1,
+.two-col .col2 {
+    width: 50%;
+}
+
+.two-col .col1 {
+    float: left;
+}
+
+.two-col .col2 {
+    float: right;
+}
+
+.two-col label {
+    display: block;
+}
+
+div {
+    font-size: large;
+}
+
+input[type=checkbox] {
+    position: relative;
+    bottom: 1px;
+    width: 100px;
+}
+
+
+input {
+    width: 300px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 1px solid black;
+    background-color: white;
+    position: -webkit-sticky;
+    font-size: 16px;
+    font-family: Arial;
+}
+
+button {
+    margin: 20px;
+    width: 200px;
+    height: 30px;
+    background-color: aqua;
+
+
+}

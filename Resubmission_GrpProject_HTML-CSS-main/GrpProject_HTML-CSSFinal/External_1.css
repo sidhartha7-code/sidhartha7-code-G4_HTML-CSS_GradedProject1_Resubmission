@@ -1,0 +1,324 @@
+body {
+  margin: 0%;
+  background-color: darkgray;
+  object-fit: contain;
+}
+
+header {
+  top: 0%;
+  padding: 2%;
+  position: fixed;
+  text-align: center;
+  font-weight: bold;
+  vertical-align: middle;
+  font-size: 28px;
+  ;
+  z-index: 1;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: rgb(82, 80, 80);
+  width: 100%;
+  height: 70px;
+  color: white;
+}
+
+nav {
+  top: 6%;
+  padding: 2px;
+  position: fixed;
+  vertical-align: middle;
+  background-color: grey;
+  z-index: 1;
+  width: 100%;
+}
+
+.menu {
+  margin: 0%;
+  background-color: rgba(153, 143, 143, 0.075);
+}
+
+.menu li {
+  display: inline-block;
+  padding: 10px;
+}
+
+.menu li a {
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.menu li:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+#menu1,
+#menu2 {
+  position: absolute;
+  width: auto;
+  max-width: 200px;
+  display: none;
+  background-color: lightgray;
+  padding: 0%;
+}
+
+.menu li:nth-child(2):hover #menu1,
+.menu li:nth-child(3):hover #menu2 {
+  display: block;
+}
+
+#menu1 li,
+#menu2 li {
+  display: block;
+}
+
+#menu1 li,
+#menu2 li:hover {
+  color: blue;
+}
+
+
+#container {
+  position: relative;
+  cursor: pointer;
+  top: 2%;
+  width: 100%;
+  height: 700px;
+
+  left: 0;
+  /*padding:15px;*/
+  display: inline-block;
+  border-image-width: 100%;
+  height: fit-content;
+  object-fit: fill;
+
+
+}
+
+.image {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  top: 2%;
+  bottom: 60%;
+  box-sizing: border-box;
+  display: inline-block;
+  object-fit: fill;
+
+}
+
+.image1 {
+  position: absolute;
+  width: 100%;
+  top: 2%;
+  bottom: 70%;
+  display: inline-block;
+  object-fit: fill;
+  animation-name: appear;
+  animation-duration: 30s;
+  animation-delay: 25s;
+  animation-iteration-count: infinite;
+
+}
+
+.image2 {
+  position: absolute;
+  width: 100%;
+  top: 2%;
+  bottom: 70%;
+  display: inline-block;
+  object-fit: fill;
+  /*-webkit-animation: appear 20s;*/
+  animation-name: appear;
+  animation-duration: 30s;
+  animation-delay: 20s;
+  animation-iteration-count: infinite;
+
+}
+
+.image3 {
+  position: absolute;
+  width: 100%;
+  top: 2%;
+  bottom: 70%;
+  display: inline-block;
+  object-fit: fill;
+  /*-webkit-animation: appear 20s;*/
+  animation-name: appear;
+  animation-delay: 15s;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+
+}
+
+.image4 {
+  position: absolute;
+  width: 100%;
+  top: 2%;
+  bottom: 70%;
+  display: inline-block;
+  object-fit: fill;
+  /*-webkit-animation: appear 20s;*/
+  animation-name: appear;
+  animation-delay: 10s;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+
+}
+
+.image5 {
+  position: absolute;
+  width: 100%;
+  top: 2%;
+  bottom: 70%;
+  display: inline-block;
+  object-fit: fill;
+  /*-webkit-animation: appear 20s;*/
+  animation-name: appear;
+  animation-duration: 30s;
+  animation-delay: 5s;
+  animation-iteration-count: infinite;
+  object-fit: fill;
+}
+
+
+.image1:hover #container {
+  z-index: 1;
+}
+
+.image2:hover #container {
+  z-index: 2;
+}
+
+.image3:hover #container {
+  z-index: 3;
+}
+
+.image4:hover #container {
+  z-index: 4;
+}
+
+.image5:hover #container {
+  z-index: 5;
+}
+
+.image1,
+.image2,
+.image3,
+.image4,
+.image5 {
+  transition: all 100s;
+
+}
+
+.image1:hover,
+.image2:hover,
+.image3:hover,
+.image4:hover,
+.image5:hover {
+  -webkit-tranform: linear;
+  transform: linear;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 1;
+  }
+
+  17% {
+    opacity: 1;
+  }
+
+  25% {
+    opacity: 0;
+  }
+
+  92% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+section {
+  position: inline-block;
+  margin-top: 400px;
+  left: 2px;
+  right: 2px;
+  bottom: 5%;
+  width: 100%;
+  height: 940px;
+  border: 4px solid black;
+  background-color: darkgray;
+  margin-left: 2px;
+  margin-bottom: 5%;
+  background-color: whitesmoke;
+}
+
+.main {
+  background-color: white;
+  margin-bottom: 5%;
+
+}
+
+.secondsection {
+  display: inline-block;
+  position: relative;
+  width: 22%;
+  height: 350px;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  margin-left: 15px;
+  background-color: rgb(244, 244, 244);
+
+}
+
+.imageblock {
+  display: block;
+  width: 100%;
+  height: 50%;
+
+}
+
+.secondsection,
+.imageblock {
+  border-radius: 10px;
+}
+
+footer1 {
+  top: 95%;
+  padding: 2%;
+  position: fixed;
+  text-align: center;
+  vertical-align: bottom;
+  font-size: 15 px;
+  z-index: 1;
+  padding-top: 10px;
+  background-color: black;
+  width: 97%;
+  color: white;
+}
+
+button {
+  display: block;
+  width: 100%;
+  height: 30px;
+  border-color: rgba(127, 54, 245, 0.938);
+  background-color: rgba(237, 233, 248, 0.904);
+  font-family: "Arial";
+  font-size: 18px;
+  color: orange;
+  font-weight: bold;
+}
+
+button:focus {
+  border-color: rgb(0, 255, 76);
+  background-color: rgb(250, 234, 230);
+}
+
+
+[class~=imageblock]:hover {
+  transform: scale(1.2);
+}

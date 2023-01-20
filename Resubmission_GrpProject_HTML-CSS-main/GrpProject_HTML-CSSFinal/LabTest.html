@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+        <title>LabTest Page</title>
+        <link rel="stylesheet" href="External_2.css">
+</head>
+
+<body>
+
+        <form name="myform" method="post" action="Confirmation.html" onsubmit="return validateform()"
+                style="width:100%; height:100%;overflow:auto;object-fit: contain;" class="main-page">
+                <div style="float:left;width:55%;height:600px;overflow:auto;" class="inner-div">
+                        <h1>
+                                1.Your Contact Details
+                        </h1>
+
+                        <div class="two-col">
+                                <div class="col1">
+                                        <input required type="text" placeholder="Full Name" name="name" maxlength="250">
+                                </div>
+                                <div class="col2">
+                                        <input type="text" placeholder="Patient Id if exists">
+                                </div>
+                        </div>
+
+                        <div class="two-col">
+                                <div class="col1">
+                                        <input required type="text" placeholder="Phone Number" name="pnumber">
+                                </div>
+                                <div class="col2">
+                                        <input required type="email" placeholder="email" name="email"
+                                                onsubmit="return validateemail()">
+                                </div>
+                        </div>
+                        <br>
+                        <h1>
+                                2.Address
+                        </h1>
+
+                        <div class="two-col">
+                                <div class="col1">
+                                        <input required type="text" placeholder="HouseNo" name="hnumber">
+                                </div>
+                                <div class="col2">
+                                        <input required type="text" placeholder="Street" name="street">
+                                </div>
+                        </div>
+
+                        <div class="two-col">
+                                <div class="col1">
+                                        <input required type="text" placeholder="Area" name="area">
+                                </div>
+                        </div>
+                        <br>
+                        <h1>
+                                3.District
+                        </h1>
+                        <label for="District">
+                                <b>Choose a District</b>
+                        </label>
+                        <select name="District" id="District">
+                                <option value="Chennai">Chennai</option>
+                                <option value="Ernakulam">Ernakulam</option>
+                                <option value="Mumbai">Mumbai</option>
+                                <option value="Lucknow">Lucknow</option>
+                        </select>
+                        <br><br>
+                        <h1>
+                                4.TestType
+                        </h1>
+
+                        <label for="TestType">Choose a TestType(Check atleast one box without fail)</label><br><br>
+
+                        <div class="two-col">
+                                <div class="type">
+                                        <label for="CBC"><input type="checkbox" id="CBC" name="CBC"
+                                                        value="CBC">CBC</label>
+                                </div>
+                                <br>
+                                <div class="type">
+                                        <label for="Complete Urine"><input type="checkbox" id="Complete Urine"
+                                                        name="Complete Urine" value="Complete Urine">Complete
+                                                Urine</label>
+                                </div>
+                        </div>
+                        <div class="two-col">
+                                <div class="type">
+                                        <label for="Lipid Profile"><input type="checkbox" id="Lipid Profile"
+                                                        name="Lipid Profile" value="Lipid Profile">Lipid Profile</label>
+                                </div>
+                                <br>
+                                <div class="type">
+                                        <label for="Thyroid Stimulating Hormone"><input type="checkbox"
+                                                        id="Thyroid Simulating Hormone"
+                                                        name="Thyroid Stimulating Hormone"
+                                                        value="Thyroid Stimulating Hormone">TSH</label>
+                                </div>
+                        </div>
+                        <div class="two-col">
+                                <div class="type">
+                                        <label for="Glucose Test"><input type="checkbox" id="Glucose Test"
+                                                        name="Glucose Test" value="Glucose Test">Glucose Test</label>
+                                </div>
+                        </div>
+                        <br>
+                        <h1>
+                                5.Do You want a hardcopy of the Test?
+                        </h1>
+
+                        <label for="YesNo">
+                                Select Yes or No
+                        </label>
+                        <select name="YesNo" id="YesNo">
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                        </select>
+                        <br><br>
+                        <h1>
+                                6.Select Your Comfortable Date and Time
+                        </h1>
+                        <label for="Date and Time">Date and Time</label>
+                        <input type="datetime-local" id="Date and Time" name="Date and Time">
+                        <br>
+                        <br>
+
+                </div>
+
+
+                <img style="width:40%;float:right;position:fixed;height:600px;overflow:auto;" class="inner-div"
+                        src="images/lab-test.jpg">
+
+                </div>
+
+
+                <div class="button-position">
+                        <button type="reset" value="Reset">Reset</button>
+                        <button type="submit" value="register">Submit</button>
+                </div>
+
+                </div>
+        </form>
+        <script>
+                function validateform() {
+                        var name = document.myform.name.value;
+                        var email = document.myform.email.value;
+                        var pnumber = document.myform.pnumber.value;
+                        var hnumber = document.myform.hnumber.value;
+                        var street = document.myform.street.value;
+                        if (name == "" || pnumber == "" || hnumber == "" || street == "") {
+                                alert("Please fill out the fields");
+                                return false;
+                        } elseif(email = "")
+                        {
+                                alert("Email is missing");
+                                return false;
+                        }
+                }
+
+                function validateemail() {
+                        var x = document.myform.email.value;
+                        var atposition = x.indexOf("@");
+                        var dotposition = x.lastIndexOf(".");
+                        if (atposition < 1 || dotposition < atposition + 2 || dotposition + 2 >= x.length) {
+                                alert("Please enter a valid e-mail address \n atpostion:" + atposition + "\n dotposition:" + dotposition);
+                                return false;
+                        }
+                }  
+        </script>
+</body>
+
+</html>
